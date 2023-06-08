@@ -50,7 +50,7 @@ function unico() {
 
 
     // Imprimir el array original y el array con valores únicos
-    console.log('Array original:', numbers);
+    console.log('Array :', numbers);
     console.log('Array con valores únicos:', uniqueNumbers);
 }
 
