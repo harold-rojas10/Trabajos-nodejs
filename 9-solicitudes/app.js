@@ -13,7 +13,7 @@ const server = http.createServer((req, res) => {
       // Verifica si el método de solicitud es GET.
 
       // Método GET: mostrar el formulario
-      fs.readFile("index.html", (error, data) => {
+      fs.readFile("9-solicitudes/index.html","utf8", (error, data) => {
         // Lee el archivo "index.html".
         
         if (error) {
@@ -29,7 +29,7 @@ const server = http.createServer((req, res) => {
         return res.end();
       });
     }
-  } else if (req.url === "/enviado" && req.method === "POST") {
+  } else if (req.url === "/enviado.html" && req.method === "POST") {
     // Verifica si la URL solicitada es "/enviado" y el método de solicitud es POST.
 
     // Método POST: procesar datos del formulario
@@ -49,7 +49,7 @@ const server = http.createServer((req, res) => {
       console.log("Nombre:", name);
       console.log("Email:", email);
 
-      fs.readFile("enviado.html", "utf8", (error, data) => {
+      fs.readFile("9-solicitudes/enviado.html", "utf8", (error, data) => {
         // Lee el archivo "enviado.html".
 
         if (error) {
@@ -71,13 +71,13 @@ const server = http.createServer((req, res) => {
     });
   } else {
     // Ruta no encontrada
-    fs.readFile("404.html", (error, data) => {
+    fs.readFile("9-solicitudes/404.html", (error, data) => {
       // Lee el archivo "404.html".
 
       if (error) {
         // Si ocurre un error al leer el archivo.
         res.writeHead(500, { "Content-Type": "text/html" });
-        res.write("<h1>Error interno del servidor</h1>");
+        res.write("<h1>Error interno del servidor 404</h1>");
         return res.end();
       }
 
