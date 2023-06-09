@@ -29,7 +29,7 @@ const server = http.createServer((req, res) => {
         return res.end();
       });
     }
-  } else if (req.url === "/enviado.html" && req.method === "POST") {
+  } else if (req.url === "/enviado" && req.method === "POST") {
     // Verifica si la URL solicitada es "/enviado" y el método de solicitud es POST.
 
     // Método POST: procesar datos del formulario
