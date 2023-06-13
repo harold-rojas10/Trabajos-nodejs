@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader("Content-Type", "text/html");
     //enviar un mensaje al cliente
-    res.write("<h1>Hola mundo!</h1>");
+    res.write("<h1>Backend</h1>");
     // Escuchar el evento 'finish' en la respuesta
     res.on('finish', () => {
         console.log('La respuesta se ha enviado completamente.');
