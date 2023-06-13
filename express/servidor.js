@@ -42,6 +42,10 @@ app.get('/ciencia-tecnologia',(req, res) => {
 app.get('/servidor',(req, res) => {
     res.sendFile('/Users/haroldrojas/Documents/VSCODE/Trabajos-nodejs/8-Servidor/index.html')
 })
+//Manejo error 500
+app.use((error, req, res, next) => {
+    res.status(500).send('Ha ocurrido un error interno en el servidor.');
+});
 app.get('*',(req, res) => {
     //Envio con estado
     res.status(404).sendFile(__dirname + '/404.html')
