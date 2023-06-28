@@ -1,7 +1,7 @@
 //importacion de la clase
 const saludo = require("./saludo.js");
 //primer saludo
-const primerSaludo = new saludo('Mi primer saludo')
+const primerSaludo = new saludo.saludo2('Mi primer saludo')
 console.log(primerSaludo.saludar("Amparo", 39));
 console.log(primerSaludo.saludarHolaMundo());
 console.log("--------------------------------------");

@@ -5,6 +5,7 @@ const PUERTO = 3000;
 
 app.use(express.static('public'));//uso de archivos estaticos
 
+
 app.get('/',(req, res) => {
     //Envio con estado
     res.status(200).sendFile(__dirname + '/index.html')

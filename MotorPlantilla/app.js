@@ -21,6 +21,7 @@ app.post('/login', (req, res) => {
 })
 
 
+
 app.get('/contacto', (req, res) => {
     const data = {
         tituloEncabezado: 'Contacto',
